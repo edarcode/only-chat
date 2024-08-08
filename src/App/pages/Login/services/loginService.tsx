@@ -1,4 +1,4 @@
-import { BASE_URL } from "../../../../edarcode-api/urls";
+import { API } from "../../../../constants/api";
 import { EdarErr } from "../../../../error/EdarErr";
 
 export const loginService = async (signal: AbortSignal, params: Params) => {
@@ -16,7 +16,7 @@ export const loginService = async (signal: AbortSignal, params: Params) => {
 	return await res.json();
 };
 
-const URL = `${BASE_URL}/user/client/auth/login`;
+const URL = `${API.baseUrl}/user/client/auth/login`;
 
 type Params = {
 	email: string;

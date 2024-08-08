@@ -2,7 +2,6 @@ import { useState } from "react";
 import { joinClassNames } from "../../../utils/joinClassNames";
 import BtnNav from "./components/BtnNav/BtnNav";
 import Nav from "./components/Nav/Nav";
-import Networks from "./components/Networks/Networks";
 import css from "./css.module.css";
 import { Props } from "./types";
 
@@ -17,7 +16,6 @@ export default function Header({ className }: Props) {
 
 	return (
 		<header className={finalClassName}>
-			<Networks className={css.networks} />
 			<BtnNav
 				className={finalClassNameBtn}
 				isCross={isVisible}

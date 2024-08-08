@@ -1,4 +1,5 @@
 import { joinClassNames } from "../../../utils/joinClassNames";
+import Networks from "./components/Networks/Networks";
 import css from "./css.module.css";
 import { Props } from "./types";
 
@@ -19,6 +20,7 @@ export default function Footer({ className }: Props) {
 				</p>
 				<p>© Casi todos los derechos reservados.</p>
 			</div>
+			<Networks />
 		</footer>
 	);
 }

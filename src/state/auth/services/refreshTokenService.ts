@@ -1,4 +1,4 @@
-import { BASE_URL } from "../../../edarcode-api/urls";
+import { API } from "../../../constants/api";
 import { EdarErr } from "../../../error/EdarErr";
 
 export const refreshTokenService = async (token: string) => {
@@ -16,4 +16,4 @@ export const refreshTokenService = async (token: string) => {
 	return await res.json();
 };
 
-const URL = `${BASE_URL}/user/client/auth/refresh-token`;
+const URL = `${API.baseUrl}/user/client/auth/refresh-token`;
