@@ -1,0 +1,30 @@
+.wrapper_select {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 150px;
+}
+
+.select {
+	width: 100%;
+	appearance: none;
+	border-radius: var(--r-sm);
+	border: none;
+	outline: transparent;
+	box-shadow: var(--s-sm);
+	padding: var(--p-sm) var(--p-md);
+	padding-right: calc(var(--p-md) + 20px); /*20px size de .arrow*/
+}
+
+.select:focus {
+	box-shadow: var(--s-md);
+}
+
+.arrow {
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	right: calc(var(--p-md) / 2);
+	width: 20px;
+	transform: translateY(-50%) rotate(90deg);
+}

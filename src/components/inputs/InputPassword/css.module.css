@@ -1,0 +1,11 @@
+.label {
+	display: grid;
+	gap: var(--g-sm);
+	cursor: text;
+	width: 300px;
+}
+
+.err {
+	margin-left: 5px;
+	color: var(--c-red);
+}

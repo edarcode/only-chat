@@ -1,0 +1,38 @@
+.header {
+	position: relative;
+	padding: var(--p-md);
+	display: grid;
+	justify-items: center;
+}
+
+.header::after {
+	content: "";
+	width: 95%;
+	min-width: var(--min-w-main);
+	max-width: var(--max-w-main);
+	height: 1px;
+	background-color: var(--c-lightgray);
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.btn {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.btn {
+		display: initial;
+		margin-left: auto;
+		z-index: 20;
+	}
+	.btn.cross {
+		color: var(--c-green);
+	}
+	.header {
+		display: flex;
+		align-items: center;
+	}
+}

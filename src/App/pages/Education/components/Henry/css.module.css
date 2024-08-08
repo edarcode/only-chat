@@ -1,0 +1,4 @@
+.henry {
+	display: grid;
+	gap: var(--g-md);
+}

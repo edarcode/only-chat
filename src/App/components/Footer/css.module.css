@@ -1,0 +1,32 @@
+.footer {
+	position: relative;
+	padding: var(--p-md);
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	gap: var(--g-sm);
+}
+
+.footer::after {
+	content: "";
+	width: 95%;
+	min-width: var(--min-w-main);
+	max-width: var(--max-w-main);
+	height: 1px;
+	background-color: var(--c-lightgray);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.gmail img {
+	width: 28px;
+}
+
+.gmail p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}

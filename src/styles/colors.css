@@ -1,0 +1,13 @@
+:root {
+	--c-black: hsl(0, 0%, 14%);
+	--c-darkblack: hsl(0, 0%, 7%);
+	--c-lightblack: hsl(0, 0%, 20%);
+	--c-red: #cd231d;
+	--c-green: #8c9900;
+	--c-yellow: hsl(50, 100%, 50%);
+	--c-blue: hsl(210, 100%, 40%);
+	--c-gray: #6e6e73;
+	--c-darkgray: rgb(68, 68, 68);
+	--c-lightgray: hsl(0, 0%, 81%);
+	--c-white: hsl(60, 100%, 97%);
+}

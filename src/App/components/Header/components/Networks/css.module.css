@@ -1,0 +1,12 @@
+.networks {
+	display: flex;
+	gap: var(--g-sm);
+}
+
+.networks img {
+	transition: transform 1s ease;
+}
+
+.networks img:hover {
+	transform: scale(1.2);
+}

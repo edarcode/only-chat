@@ -1,0 +1,10 @@
+.design,
+.inputs {
+	display: grid;
+	gap: var(--g-md);
+}
+
+.btns {
+	display: flex;
+	gap: var(--g-md);
+}

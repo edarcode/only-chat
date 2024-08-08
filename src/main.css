@@ -1,0 +1,22 @@
+@import "./styles/reset.css";
+@import "./styles/colors.css";
+@import "./styles/shadow.css";
+@import "./styles/radius.css";
+@import "./styles/fonts.css";
+@import "./styles/padding.css";
+@import "./styles/gap.css";
+@import "./styles/scroll.css";
+
+body {
+	background-color: var(--c-white);
+	color: var(--c-darkblack);
+}
+
+p {
+	color: var(--c-gray);
+}
+
+svg {
+	width: 28px;
+	height: 28px;
+}

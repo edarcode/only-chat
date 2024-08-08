@@ -1,0 +1,38 @@
+.btn {
+	position: relative;
+	border: none;
+	padding: var(--p-sm) var(--p-md);
+	cursor: pointer;
+}
+
+.btn:disabled {
+	cursor: initial;
+	background-color: var(--c-white);
+	color: var(--c-gray);
+	border: 1px solid var(--c-gray);
+}
+
+.btn.btn__err {
+	padding-right: calc(var(--p-md) + 20px);
+}
+
+.primary {
+	color: var(--c-white);
+	background-color: var(--c-blue);
+	border-radius: var(--r-md);
+}
+
+.loading,
+.err {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: calc(var(--p-md) / 2);
+	width: 20px;
+	height: 20px;
+	color: var(--c-red);
+}
+
+.loading {
+	color: currentColor;
+}

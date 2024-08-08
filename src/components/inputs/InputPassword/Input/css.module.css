@@ -1,0 +1,25 @@
+.label {
+	position: relative;
+}
+
+.input {
+	width: 100%;
+	border: none;
+	outline: transparent;
+	box-shadow: var(--s-sm);
+	border-radius: var(--r-sm);
+	padding: var(--p-sm) var(--p-md);
+	padding-right: calc(var(--p-md) + 20px); /*20px size svg de estado*/
+}
+
+.input:focus {
+	box-shadow: var(--s-md);
+}
+
+.input::placeholder {
+	color: var(--c-lightgray);
+}
+
+.input__err {
+	border: 1px solid var(--c-red);
+}
