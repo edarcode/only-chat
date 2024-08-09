@@ -5,9 +5,9 @@ import css from "./css.module.css";
 export default function UserSearch({ className }: Props) {
 	const finalClassName = joinClassNames([css.search, className]);
 	return (
-		<>
-			<InputText async className={finalClassName} />
-		</>
+		<section className={finalClassName}>
+			<InputText async />
+		</section>
 	);
 }
 

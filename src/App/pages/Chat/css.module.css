@@ -1,23 +1,28 @@
 .chat {
+	height: 100%;
 	display: grid;
+	gap: var(--g-md);
 	grid-template-areas:
 		"search profile"
-		"following message"
 		"following message";
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	box-shadow: var(--s-sm);
+	padding: var(--p-md);
 }
 
 .search {
-	grid-area: "search";
+	grid-area: search;
 }
 
 .profile {
-	grid-area: "profile";
+	grid-area: profile;
 }
 
 .following {
-	grid-area: "following";
+	grid-area: following;
 }
 
 .message {
-	grid-area: "message";
+	grid-area: message;
 }
