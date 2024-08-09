@@ -4,10 +4,21 @@ import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 import RouteProtector from "./RouteProtector/RouteProtector";
 
+export const CHAT = {
+	id: crypto.randomUUID(),
+	name: "Chat",
+	path: "/",
+	element: (
+		<RouteProtector>
+			<Chat />
+		</RouteProtector>
+	)
+} as const;
+
 export const LOGIN = {
 	id: crypto.randomUUID(),
 	name: "Login",
-	path: "/",
+	path: "/login",
 	element: <Login />
 } as const;
 
@@ -25,15 +36,4 @@ export const DESIGN_SYSTEM = {
 	element: <DesignSystem />
 } as const;
 
-export const CHAT = {
-	id: crypto.randomUUID(),
-	name: "Chat",
-	path: "/chat",
-	element: (
-		<RouteProtector>
-			<Chat />
-		</RouteProtector>
-	)
-} as const;
-
-export const PAGES = [LOGIN, CHAT, SIGNUP, DESIGN_SYSTEM];
+export const PAGES = [CHAT, SIGNUP, DESIGN_SYSTEM];
