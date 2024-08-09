@@ -1,8 +1,8 @@
-import { API } from "../../../constants/api";
+import { api } from "../../../constants/api";
 import { EdarErr } from "../../../error/EdarErr";
 
 export const refreshTokenService = async (token: string) => {
-	const res = await fetch(URL, {
+	const res = await fetch(api.refreshToken, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -15,5 +15,3 @@ export const refreshTokenService = async (token: string) => {
 
 	return await res.json();
 };
-
-const URL = `${API.baseUrl}/user/client/auth/refresh-token`;

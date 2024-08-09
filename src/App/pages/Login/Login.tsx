@@ -1,10 +1,11 @@
 import Btn from "../../../components/buttons/Btn/Btn";
 import InputPassword from "../../../components/inputs/InputPassword/InputPassword";
 import InputText from "../../../components/inputs/InputText/InputText";
-import Hyperlink from "../../../components/links/Hyperlink/Hyperlink";
 import { Event } from "../../../types";
 import css from "./css.module.css";
 import { useLogin } from "./hooks/useLogin";
+import LinkTo from "../../../components/links/LinkTo/LinkTo";
+import { SIGNUP } from "../../router/pages";
 
 export default function Login() {
 	const { form, state, set, isValid, auth } = useLogin();
@@ -28,7 +29,7 @@ export default function Login() {
 				err={form.password.err}
 				onChange={e => set.password(e.target.value)}
 			/>
-			<Hyperlink href="#">Ir a registro</Hyperlink>
+			<LinkTo to={SIGNUP.path}>Ir a registro</LinkTo>
 			<Btn disabled={!isValid} loading={state.loading} err={state.err}>
 				Login
 			</Btn>

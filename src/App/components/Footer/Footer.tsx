@@ -7,6 +7,7 @@ export default function Footer({ className }: Props) {
 	const finalClassName = joinClassNames([css.footer, className]);
 	return (
 		<footer className={finalClassName}>
+			<Networks />
 			<div className={css.gmail}>
 				<p>
 					edarcode@
@@ -20,7 +21,6 @@ export default function Footer({ className }: Props) {
 				</p>
 				<p>© Casi todos los derechos reservados.</p>
 			</div>
-			<Networks />
 		</footer>
 	);
 }

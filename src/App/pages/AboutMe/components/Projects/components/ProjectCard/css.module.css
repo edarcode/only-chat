@@ -1,7 +1,0 @@
-.project {
-	display: grid;
-	gap: var(--g-md);
-	justify-items: start;
-	max-width: 340px;
-	border-radius: var(--r-sm);
-}

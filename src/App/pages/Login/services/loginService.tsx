@@ -1,8 +1,8 @@
-import { API } from "../../../../constants/api";
+import { api } from "../../../../constants/api";
 import { EdarErr } from "../../../../error/EdarErr";
 
 export const loginService = async (signal: AbortSignal, params: Params) => {
-	const res = await fetch(URL, {
+	const res = await fetch(api.login, {
 		signal,
 		method: "POST",
 		headers: {
@@ -15,8 +15,6 @@ export const loginService = async (signal: AbortSignal, params: Params) => {
 
 	return await res.json();
 };
-
-const URL = `${API.baseUrl}/user/client/auth/login`;
 
 type Params = {
 	email: string;

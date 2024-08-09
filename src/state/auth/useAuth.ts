@@ -55,5 +55,11 @@ export const useAuth = create<Auth>()(
 	)
 );
 
-type InfoToken = { name: string; role: Role; iat: number };
+type InfoToken = {
+	id: string;
+	username: string;
+	role: Role;
+	iat: number;
+	img: string;
+};
 type Role = "ADMIN" | "BOSS" | "CLIENT";

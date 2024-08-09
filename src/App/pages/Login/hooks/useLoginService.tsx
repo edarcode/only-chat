@@ -3,6 +3,7 @@ import { loginService } from "../services/loginService";
 import { Login, SetLogin } from "./useLogin";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../../state/auth/useAuth";
+import { CHAT } from "../../../router/pages";
 
 export function useLoginService(params: Params) {
 	const { login, setLogin } = params;
@@ -19,7 +20,7 @@ export function useLoginService(params: Params) {
 			.then(res => {
 				const token = res.token as string;
 				updateToken(token);
-				navigate("/");
+				navigate(CHAT.path);
 			})
 			.catch(() => {
 				setLogin({ ...login, state: { loading: false, err: true } });

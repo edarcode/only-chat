@@ -18,7 +18,7 @@ export default function Nav(props: Props) {
 	]);
 
 	const links = PAGES.map(page => {
-		if (page.name === "Login" && infoToken && infoToken.name) {
+		if (page.name === "Login" && infoToken && infoToken.username) {
 			return (
 				<LinkTo key={page.id} to={page.path} onClick={logout}>
 					Logout
