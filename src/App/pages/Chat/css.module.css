@@ -1,0 +1,23 @@
+.chat {
+	display: grid;
+	grid-template-areas:
+		"search profile"
+		"following message"
+		"following message";
+}
+
+.search {
+	grid-area: "search";
+}
+
+.profile {
+	grid-area: "profile";
+}
+
+.following {
+	grid-area: "following";
+}
+
+.message {
+	grid-area: "message";
+}

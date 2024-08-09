@@ -5,3 +5,12 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.login a {
+	color: var(--c-blue);
+	transition: initial;
+}
+
+.login a:hover {
+	color: var(--c-blue);
+}
