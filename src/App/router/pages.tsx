@@ -36,4 +36,4 @@ export const DESIGN_SYSTEM = {
 	element: <DesignSystem />
 } as const;
 
-export const PAGES = [CHAT, SIGNUP, DESIGN_SYSTEM];
+export const PAGES = [CHAT, DESIGN_SYSTEM];
