@@ -9,6 +9,7 @@
 	grid-template-rows: auto 1fr;
 	box-shadow: var(--s-sm);
 	padding: var(--p-md);
+	border-radius: var(--r-md);
 }
 
 .search {

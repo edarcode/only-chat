@@ -1,5 +1,6 @@
 .header {
 	padding: var(--p-md);
+	padding-bottom: 0;
 	display: grid;
 	justify-items: center;
 }
