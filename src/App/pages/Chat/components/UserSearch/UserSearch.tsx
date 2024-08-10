@@ -9,10 +9,11 @@ export default function UserSearch({ className }: Props) {
 	const finalClassName = joinClassNames([css.search, className]);
 
 	return (
-		<form className={finalClassName}>
+		<form className={finalClassName} onSubmit={e => e.preventDefault()}>
 			<InputText
 				async
 				className={css.input}
+				autoComplete="off"
 				placeholder="Buscar"
 				loading={loading}
 				err={username.err}

@@ -1,3 +1,6 @@
+import { UserType } from "../../hooks/useSearch";
+import User from "../User/User";
+
 import css from "./css.module.css";
 
 export default function Users({ users }: Props) {
@@ -6,18 +9,12 @@ export default function Users({ users }: Props) {
 	return (
 		<section className={css.users}>
 			{users.map(user => (
-				<span key={user.id}> {user.username} </span>
+				<User key={user.id} user={user} />
 			))}
 		</section>
 	);
 }
 
 type Props = {
-	users: User[] | [];
-};
-
-type User = {
-	id: string;
-	img: string | null;
-	username: string;
+	users: UserType[];
 };

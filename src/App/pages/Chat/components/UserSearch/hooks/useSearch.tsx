@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { usernameSchema } from "../../../../../../zod-schemas/usernameSchema";
 import { searchService } from "../services/searchService";
 
-const initialSearch = {
+const initialSearch: Search = {
 	username: { value: "", err: "" },
 	loading: false,
 	err: "",
@@ -40,7 +40,7 @@ export const useSearch = () => {
 			username: { value: newValue, err: "" }
 		};
 		const { success, error } = usernameSchema.safeParse(newValue);
-		if (!success) newSearch.username.err = error.errors[0].message;
+		if (!success && newValue) newSearch.username.err = error.errors[0].message;
 		setSearch(newSearch);
 	};
 
@@ -51,4 +51,17 @@ export const useSearch = () => {
 		users: search.users,
 		setUsername
 	};
+};
+
+type Search = {
+	username: { value: string; err: string };
+	loading: boolean;
+	err: string;
+	users: UserType[];
+};
+
+export type UserType = {
+	id: string;
+	img: string | null;
+	username: string;
 };

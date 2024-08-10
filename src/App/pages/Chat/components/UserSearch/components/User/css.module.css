@@ -1,0 +1,9 @@
+.user {
+	display: flex;
+	justify-items: center;
+	align-items: center;
+}
+.btn {
+	margin-left: auto;
+	padding: 2px 8px;
+}
