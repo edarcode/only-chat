@@ -1,16 +1,17 @@
 import Btn from "../../../components/buttons/Btn/Btn";
 import InputPassword from "../../../components/inputs/InputPassword/InputPassword";
 import InputText from "../../../components/inputs/InputText/InputText";
-import { Event } from "../../../types";
+
 import css from "./css.module.css";
 import { useLogin } from "./hooks/useLogin";
 import LinkTo from "../../../components/links/LinkTo/LinkTo";
 import { SIGNUP } from "../../router/pages";
+import { FormEvent } from "../../../types";
 
 export default function Login() {
 	const { form, state, set, isValid, auth } = useLogin();
 
-	const hSubmit = (e: Event) => {
+	const hSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		if (!isValid) return;
 		auth();

@@ -1,5 +1,8 @@
 export const REGEX = {
 	specialCharacters: /[¡!@#$%^&*(),.¿?":{}|<>-_+]/,
 	numbers: /[\d]/,
-	startWithNum: /^[0-9]/
+	startWithSpace: /^\s/,
+	endWithSpace: /\s$/,
+	mayus: /[A-Z]/,
+	space: /\s/
 };

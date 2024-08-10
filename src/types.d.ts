@@ -1,1 +1,2 @@
-export type Event = React.FormEvent<HTMLFormElement>;
+export type FormEvent = React.FormEvent<HTMLFormElement>;
+export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;

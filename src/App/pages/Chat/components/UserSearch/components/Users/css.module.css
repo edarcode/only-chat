@@ -1,0 +1,7 @@
+.users {
+	background-color: var(--c-black);
+	color: var(--c-white);
+	padding: var(--p-sm);
+	position: absolute;
+	width: 100%;
+}
