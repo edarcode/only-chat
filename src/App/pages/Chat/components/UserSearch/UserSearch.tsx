@@ -6,7 +6,7 @@ export default function UserSearch({ className }: Props) {
 	const finalClassName = joinClassNames([css.search, className]);
 	return (
 		<section className={finalClassName}>
-			<InputText async />
+			<InputText async className={css.input} />
 		</section>
 	);
 }

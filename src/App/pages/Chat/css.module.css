@@ -1,29 +1,16 @@
 .chat {
 	height: 100%;
 	display: grid;
-	gap: var(--g-md);
-	grid-template-areas:
-		"search profile"
-		"following message";
-	grid-template-columns: auto 1fr;
+	gap: 16px;
+	grid-template-columns: 25% 1fr;
 	grid-template-rows: auto 1fr;
 	box-shadow: var(--s-sm);
 	padding: var(--p-md);
 	border-radius: var(--r-md);
 }
 
-.search {
-	grid-area: search;
-}
-
-.profile {
-	grid-area: profile;
-}
-
-.following {
-	grid-area: following;
-}
-
-.message {
-	grid-area: message;
+.conversation {
+	border-left: 1px solid var(--c-lightgray);
+	padding-left: 15px;
+	grid-row: span 2;
 }

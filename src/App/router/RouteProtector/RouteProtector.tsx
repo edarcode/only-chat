@@ -1,6 +1,5 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../../../state/auth/useAuth";
-import { ROLE } from "../../../constants/roles";
 import { LOGIN } from "../pages";
 
 type Props = {
@@ -9,9 +8,7 @@ type Props = {
 
 export default function RouteProtector({ children }: Props) {
 	const token = useAuth(auth => auth.token);
-	const role = useAuth(auth => auth.getInfoToken()?.role);
-
-	const isAuth = token && role && role === ROLE.BOSS;
+	const isAuth = token;
 
 	if (!isAuth) return <Navigate to={LOGIN.path} replace />;
 
