@@ -4,5 +4,6 @@ class Url {
 	refreshToken = `${this.base}/user/auth/refresh-token`;
 	search = `${this.base}/user/client/search`;
 	follow = `${this.base}/follow/client/follow-to`;
+	getAccount = `${this.base}/user/client/get-account`;
 }
 export const api = new Url();

@@ -5,10 +5,12 @@ import Message from "./components/Message/Message";
 import UserSearch from "./components/UserSearch/UserSearch";
 import css from "./css.module.css";
 import io from "socket.io-client";
+import { useAccount } from "./hooks/useAccount";
 
 const socket = io(api.base);
 
 export default function Chat() {
+	useAccount();
 	return (
 		<article className={css.chat}>
 			<UserSearch className={css.search} />
