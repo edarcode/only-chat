@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import Btn from "../../../../../../../components/buttons/Btn/Btn";
-import { UserType } from "../../hooks/useSearch";
+import { Person } from "../../hooks/useSearch";
 import css from "./css.module.css";
 import { followToService } from "./service/followToService";
 import { useAuth } from "../../../../../../../state/auth/useAuth";
+import { Account } from "../../../../hooks/useAccount";
 
-export default function User({ user }: Props) {
+export default function UserFound({ userFound, account }: Props) {
 	const token = useAuth(auth => auth.token);
 	const [follow, setFollow] = useState({
 		loading: false,
@@ -18,7 +19,7 @@ export default function User({ user }: Props) {
 		const controller = new AbortController();
 
 		setFollow({ ...follow, err: false });
-		followToService(controller.signal, token, user.id)
+		followToService(controller.signal, token, userFound.id)
 			.catch(() => {
 				setFollow({ ...follow, err: true });
 			})
@@ -29,12 +30,16 @@ export default function User({ user }: Props) {
 		return () => controller.abort();
 	}, [follow.loading]);
 
+	const isValidUserToFollow =
+		account.following.every(userFollowed => userFollowed.id !== userFound.id) &&
+		account.id !== userFound.id;
+
 	return (
 		<article className={css.user}>
-			<span key={user.id}> {user.username} </span>
+			<span key={userFound.id}> {userFound.username} </span>
 			<Btn
 				className={css.btn}
-				disabled={follow.loading}
+				disabled={follow.loading || !isValidUserToFollow}
 				err={follow.err}
 				loading={follow.loading}
 				onClick={() => setFollow({ ...follow, loading: true })}
@@ -46,5 +51,6 @@ export default function User({ user }: Props) {
 }
 
 type Props = {
-	user: UserType;
+	userFound: Person;
+	account: Account;
 };

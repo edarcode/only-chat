@@ -22,7 +22,7 @@ export const useSearch = () => {
 			setSearch({ ...search, loading: true, err: "", users: [] });
 			searchService(controller.signal, token, search.username.value)
 				.then(users => {
-					setSearch({ ...search, users: users.users });
+					setSearch({ ...search, users });
 				})
 				.catch(() => setSearch({ ...search, err: "Err al pedir usuarios" }))
 				.finally(() => setSearch(search => ({ ...search, loading: false })));
@@ -59,10 +59,10 @@ type Search = {
 	username: { value: string; err: string };
 	loading: boolean;
 	err: string;
-	users: UserType[];
+	users: Person[];
 };
 
-export type UserType = {
+export type Person = {
 	id: string;
 	img: string | null;
 	username: string;

@@ -1,12 +1,12 @@
-import { joinClassNames } from "../../../utils/joinClassNames";
+import { joinClassNames } from "../../../../../utils/joinClassNames";
 import css from "./css.module.css";
-import defaultUserImg from "./user-profile.png";
+import defaultImg from "./user-profile.png";
 
 export default function UserProfile({ className, username, img }: Props) {
 	const finalClassName = joinClassNames([css.profile, className]);
 	return (
 		<article className={finalClassName}>
-			<img className={css.img} src={img ? img : defaultUserImg} alt="usuario" />
+			<img className={css.img} src={img ? img : defaultImg} alt="usuario" />
 			<span>{username}</span>
 		</article>
 	);

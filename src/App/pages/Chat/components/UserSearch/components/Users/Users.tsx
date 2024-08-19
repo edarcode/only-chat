@@ -1,20 +1,22 @@
-import { UserType } from "../../hooks/useSearch";
-import User from "../User/User";
+import { Account } from "../../../../hooks/useAccount";
+import { Person } from "../../hooks/useSearch";
+import UserFound from "../UserFound/UserFound";
 
 import css from "./css.module.css";
 
-export default function Users({ users }: Props) {
+export default function Users({ users, account }: Props) {
 	if (!users || !users.length) return null;
 
 	return (
 		<section className={css.users}>
 			{users.map(user => (
-				<User key={user.id} user={user} />
+				<UserFound key={user.id} userFound={user} account={account} />
 			))}
 		</section>
 	);
 }
 
 type Props = {
-	users: UserType[];
+	users: Person[];
+	account: Account;
 };

@@ -1,6 +1,6 @@
-import UserProfile from "../../../../../components/profiles/UserProfile/UserProfile";
 import { joinClassNames } from "../../../../../utils/joinClassNames";
 import { User } from "../../hooks/useAccount";
+import UserProfile from "../UserProfile/UserProfile";
 import css from "./css.module.css";
 
 export default function Following({ className, following }: Props) {

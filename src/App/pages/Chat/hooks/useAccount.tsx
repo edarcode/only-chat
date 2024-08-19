@@ -48,7 +48,7 @@ export type User = {
 	img: string | null;
 };
 
-type Account = {
+export type Account = {
 	id: string;
 	username: string;
 	img: string | null;
