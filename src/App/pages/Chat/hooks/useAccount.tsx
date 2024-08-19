@@ -42,7 +42,7 @@ export const useAccount = () => {
 	};
 };
 
-type User = {
+export type User = {
 	id: string;
 	username: string;
 	img: string | null;

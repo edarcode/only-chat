@@ -1,12 +1,17 @@
 import { api } from "../../../../../../constants/api";
 import { EdarErr } from "../../../../../../error/EdarErr";
 
-export const searchService = async (signal: AbortSignal, username: string) => {
+export const searchService = async (
+	signal: AbortSignal,
+	token: string,
+	username: string
+) => {
 	const res = await fetch(`${api.search}?username=${username}`, {
 		signal,
 		method: "GET",
 		headers: {
-			"Content-Type": "application/json"
+			"Content-Type": "application/json",
+			Authorization: token
 		}
 	});
 

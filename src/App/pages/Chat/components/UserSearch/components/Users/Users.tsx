@@ -4,7 +4,7 @@ import User from "../User/User";
 import css from "./css.module.css";
 
 export default function Users({ users }: Props) {
-	if (!users.length) return null;
+	if (!users || !users.length) return null;
 
 	return (
 		<section className={css.users}>

@@ -6,15 +6,15 @@ import css from "./css.module.css";
 import { useAccount } from "./hooks/useAccount";
 
 export default function Chat() {
-	useAccount();
+	const { account } = useAccount();
 	return (
 		<article className={css.chat}>
 			<UserSearch className={css.search} />
 			<div className={css.conversation}>
-				<UserProfile className={css.profile} />
+				<UserProfile className={css.profile} username={account.username} />
 				<Message className={css.message} />
 			</div>
-			<Following className={css.following} />
+			<Following className={css.following} following={account.following} />
 		</article>
 	);
 }

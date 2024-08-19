@@ -1,0 +1,9 @@
+.profile {
+	display: flex;
+	place-items: center;
+	gap: var(--g-sm);
+}
+
+.img {
+	width: 40px;
+}

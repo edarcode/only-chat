@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { usernameSchema } from "../../../../../../zod-schemas/usernameSchema";
 import { searchService } from "../services/searchService";
+import { useAuth } from "../../../../../../state/auth/useAuth";
 
 const initialSearch: Search = {
 	username: { value: "", err: "" },
@@ -11,14 +12,15 @@ const initialSearch: Search = {
 
 export const useSearch = () => {
 	const [search, setSearch] = useState(initialSearch);
+	const token = useAuth(auth => auth.token);
 
 	useEffect(() => {
-		if (!isValid) return;
+		if (!isValid || !token) return;
 
 		const controller = new AbortController();
 		const timeoutId = setTimeout(() => {
 			setSearch({ ...search, loading: true, err: "", users: [] });
-			searchService(controller.signal, search.username.value)
+			searchService(controller.signal, token, search.username.value)
 				.then(users => {
 					setSearch({ ...search, users: users.users });
 				})
