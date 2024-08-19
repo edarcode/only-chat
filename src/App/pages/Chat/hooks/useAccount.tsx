@@ -2,8 +2,14 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../../../../state/auth/useAuth";
 import { accountService } from "../services/accountService";
 
-const initialAccount = null;
-
+const initialAccount: Account = {
+	createdAt: "",
+	followers: [],
+	following: [],
+	id: "",
+	img: null,
+	username: ""
+};
 export const useAccount = () => {
 	const [account, setAccount] = useState(initialAccount);
 	const [loading, setLoading] = useState(false);
@@ -18,8 +24,7 @@ export const useAccount = () => {
 		setLoading(true);
 		setErr(false);
 		accountService(controller.signal, token)
-			.then(account => {
-				console.log(account);
+			.then((account: Account) => {
 				setAccount(account);
 			})
 			.catch(() => {
@@ -37,14 +42,17 @@ export const useAccount = () => {
 	};
 };
 
-// type Account = {
-// 	id: string;
-// 	name: string;
-// 	username: string;
-// 	email: string;
-// 	img: null | string;
-// 	createdAt: string;
-// 	following: {
-// 		followingId: string;
-// 	}[];
-// };
+type User = {
+	id: string;
+	username: string;
+	img: string | null;
+};
+
+type Account = {
+	id: string;
+	username: string;
+	img: string | null;
+	createdAt: string;
+	followers: User[];
+	following: User[];
+};
