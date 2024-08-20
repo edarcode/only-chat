@@ -1,0 +1,15 @@
+.messages {
+	display: grid;
+	grid-template-rows: 1fr auto;
+	padding: var(--p-md);
+}
+
+.form {
+	display: grid;
+	gap: var(--g-md);
+	grid-template-columns: 1fr auto;
+}
+
+.input {
+	width: 100%;
+}

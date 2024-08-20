@@ -1,5 +1,5 @@
 import Following from "./components/Following/Following";
-import Message from "./components/Message/Message";
+import Messages from "./components/Messages/Messages";
 import UserProfile from "./components/UserProfile/UserProfile";
 import UserSearch from "./components/UserSearch/UserSearch";
 import css from "./css.module.css";
@@ -12,7 +12,7 @@ export default function Chat() {
 			<UserSearch className={css.search} account={account} />
 			<div className={css.conversation}>
 				<UserProfile className={css.profile} username={account.username} />
-				<Message className={css.message} />
+				<Messages className={css.message} />
 			</div>
 			<Following className={css.following} following={account.following} />
 		</article>

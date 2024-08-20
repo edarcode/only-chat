@@ -13,4 +13,6 @@
 	border-left: 1px solid var(--c-lightgray);
 	padding-left: 15px;
 	grid-row: span 2;
+	display: grid;
+	grid-template-rows: auto 1fr;
 }
