@@ -12,7 +12,7 @@ export default function Chat() {
 			<UserSearch className={css.search} account={account} />
 			<div className={css.conversation}>
 				<UserProfile className={css.profile} username={account.username} />
-				<Messages className={css.message} />
+				<Messages className={css.message} account={account} />
 			</div>
 			<Following className={css.following} following={account.following} />
 		</article>

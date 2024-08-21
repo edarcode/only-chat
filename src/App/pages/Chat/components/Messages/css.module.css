@@ -13,3 +13,20 @@
 .input {
 	width: 100%;
 }
+
+.visualizer {
+	display: grid;
+	justify-content: stretch;
+	align-content: start;
+}
+
+.msg,
+.msg_friend {
+	padding: var(--p-sm);
+	border-radius: var(--r-md);
+}
+
+.msg_friend {
+	color: var(--c-green);
+	margin-left: 5px;
+}
