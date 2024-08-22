@@ -1,0 +1,5 @@
+.receptor {
+	background-color: var(--c-lightblack);
+	border-radius: var(--r-sm);
+	color: var(--c-white);
+}

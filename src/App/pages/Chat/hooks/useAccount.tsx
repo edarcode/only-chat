@@ -10,6 +10,7 @@ const initialAccount: Account = {
 	img: null,
 	username: ""
 };
+
 export const useAccount = () => {
 	const [account, setAccount] = useState(initialAccount);
 	const [loading, setLoading] = useState(false);
